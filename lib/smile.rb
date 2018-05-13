@@ -3,6 +3,10 @@ class Smile
 
   attr_accessor :smile
 
+  def initialize(smile: nil)
+    @smile = smile
+  end
+
   def ensmile(cry: false)
     @smile ||= begin
       raise SmileError if cry
